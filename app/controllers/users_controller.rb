@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     if params[:search]
-      @users = User.search(params[:search])
+      @users = User.search(params[:search]).reverse
     else
       @users = User.all.order(:followed_by).reverse
     end

@@ -43,4 +43,15 @@ feature 'User' do
     expect(page).not_to have_content 'Cooler than you megalolz'
     expect(page).not_to have_content 'Alex Handy'
   end
+
+# The following isn't passing... yet!
+  # scenario 'can search a term in capitals and will output a user with that term in bio regardless of state' do
+  #   visit '/'
+  #   fill_in 'Search', with: 'COOLEST'
+  #   click_button 'Search'
+  #   expect(page).to have_content 'The coolest everrrr'
+  #   expect(page).to have_content 'Ashleigh'
+  #   expect(page).not_to have_content 'Cooler than you megalolz'
+  #   expect(page).not_to have_content 'Alex Handy'
+  # end
 end
