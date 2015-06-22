@@ -17,7 +17,7 @@
           <% @users.each do |user| %>
             <tr>
               <td class='picture'>
-                <% if user.profile_picture.empty? %>
+                <% if user.profile_picture == nil || user.profile_picture.empty? %>
                   <img class="defaultimg" src="http://www.aheritier.net/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png">
                 <% else %>
                   <%= user.profile_picture %></td>
