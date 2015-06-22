@@ -3,6 +3,19 @@
 Followerwonk for Instagram
 
 https://followerwonk.com/
+--------------------------
+
+...to get this up and running, do the following...
+
+```
+git clone https://github.com/ashleigh090990/instawonk.git
+cd instawonk
+bundle
+bin/rake db:create RAILS_ENV=development
+rails s
+```
+Now visit http://localhost:3000/ in your browser!
+
 
 User Stories
 ============
