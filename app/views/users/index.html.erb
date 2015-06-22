@@ -18,9 +18,9 @@
             <tr>
               <td class='picture'>
                 <% if user.profile_picture == nil || user.profile_picture.empty? %>
-                  <img class="defaultimg" src="http://www.aheritier.net/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png">
+                  <img class="profileimg" src="http://www.aheritier.net/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png">
                 <% else %>
-                  <%= user.profile_picture %></td>
+                  <img class="profileimg" src='<%= user.profile_picture %>'></td>
                 <% end %>
               <td class='user-details'>
                   <span><b><%= user.full_name %></b></span>
