@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+.picture{
+  width: 100px;
+}
+
+.user-details{
+  width: 300px;
+}
+
+.table th {
+  text-align: center;
+}
+
+.follows {
+  text-align: center;
+}
+
+.followers {
+  text-align: center;
+}
