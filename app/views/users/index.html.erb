@@ -10,14 +10,18 @@
             <th>User Details </th>
             <th>Followers</th>
             <th>Following</th>
-            <th colspan="3"></th>
           </tr>
         </thead>
 
         <tbody>
           <% @users.each do |user| %>
             <tr>
-              <td class='picture'><%= user.profile_picture %></td>
+              <td class='picture'>
+                <% if user.profile_picture.empty? %>
+                  <img class="defaultimg" src="http://www.aheritier.net/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png">
+                <% else %>
+                  <%= user.profile_picture %></td>
+                <% end %>
               <td class='user-details'>
                   <span><b><%= user.full_name %></b></span>
                   <span><a href='#'>@<%= user.username %></a></span>
