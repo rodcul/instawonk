@@ -9,7 +9,7 @@ feature 'User' do
                 followed_by: '1000000000')
     User.create(username: 'AmIsBetter',
                 full_name: 'Ashleigh',
-                bio: 'The coolest everrrr',
+                bio: 'The coolest EVER',
                 follows: '0',
                 followed_by: '1000000001')
   end
@@ -38,20 +38,70 @@ feature 'User' do
     visit '/'
     fill_in 'Search', with: 'coolest'
     click_button 'Search'
-    expect(page).to have_content 'The coolest everrrr'
+    expect(page).to have_content 'The coolest EVER'
     expect(page).to have_content 'Ashleigh'
     expect(page).not_to have_content 'Cooler than you megalolz'
     expect(page).not_to have_content 'Alex Handy'
   end
 
-# The following isn't passing... yet!
-  # scenario 'can search a term in capitals and will output a user with that term in bio regardless of state' do
-  #   visit '/'
-  #   fill_in 'Search', with: 'COOLEST'
-  #   click_button 'Search'
-  #   expect(page).to have_content 'The coolest everrrr'
-  #   expect(page).to have_content 'Ashleigh'
-  #   expect(page).not_to have_content 'Cooler than you megalolz'
-  #   expect(page).not_to have_content 'Alex Handy'
-  # end
+  scenario 'can take an uppercase search term and return lowercase bios that match' do
+    visit '/'
+    fill_in 'Search', with: 'COOLEST'
+    click_button 'Search'
+    expect(page).to have_content 'The coolest EVER'
+    expect(page).to have_content 'Ashleigh'
+    expect(page).not_to have_content 'Cooler than you megalolz'
+    expect(page).not_to have_content 'Alex Handy'
+  end
+
+  scenario 'can take a lowercase search term and return uppercase bios that match' do
+    visit '/'
+    fill_in 'Search', with: 'ever'
+    click_button 'Search'
+    expect(page).to have_content 'The coolest EVER'
+    expect(page).to have_content 'Ashleigh'
+    expect(page).not_to have_content 'Cooler than you megalolz'
+    expect(page).not_to have_content 'Alex Handy'
+  end
+
+  scenario 'can take a search term in lowercase and return bio with one letter capitalised' do
+    visit '/'
+    fill_in 'Search', with: 'cooler'
+    click_button 'Search'
+    expect(page).not_to have_content 'The coolest EVER'
+    expect(page).not_to have_content 'Ashleigh'
+    expect(page).to have_content 'Cooler than you megalolz'
+    expect(page).to have_content 'Alex Handy'
+  end
+
+  context 'sorting results' do
+    before do
+      User.create(username: 'AhIsCool',
+                  full_name: 'Alex Handy',
+                  bio: 'Cooler than you megalolz',
+                  follows: '0',
+                  followed_by: '1000000000')
+      User.create(username: 'AmIsBetter',
+                  full_name: 'Ashleigh',
+                  bio: 'The coolest EVER',
+                  follows: '0',
+                  followed_by: '1000000001')
+      User.create(username: 'FaIsSweeter',
+                  full_name: 'Fiona',
+                  bio: 'The sweetest ever',
+                  follows: '0',
+                  followed_by: '1000000002')
+    end
+
+    scenario 'returns search results in descending followers order' do
+      visit '/'
+      fill_in 'Search', with: 'ever'
+      click_button 'Search'
+      within('table.table tbody tr:nth-child(1)') do
+        expect(page).to have_content 'Fiona'
+      end
+      expect(page).not_to have_content 'Cooler than you megalolz'
+      expect(page).not_to have_content 'Alex Handy'
+    end
+  end
 end
