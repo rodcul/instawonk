@@ -92,4 +92,8 @@ a:hover {
     float: none;
     padding: 20px 0px 0px 0px;
   }
+
+  .container-fluid {
+    padding: 10px 0px 0px 0px;
+  }
 }
