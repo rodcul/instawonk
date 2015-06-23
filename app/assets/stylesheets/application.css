@@ -16,6 +16,24 @@
 
 
 
+body {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 300;
+}
+
+table td {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 300;
+}
+
+p {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+}
+
+.container {
+  padding: 30px 0px 0px 0px;}
+
 .picture{
   width: 100px;
 }
@@ -38,11 +56,40 @@
 }
 
 .navbar-brand {
-  font-size: 500px;
+  font-size: 50px;
+  height: 65px;
 }
 
 td.user-details {
   table-layout: fixed;
   width: 300px;
-  word-break:break-all;
+  word-break: break-all;
+}
+
+.container-fluid {
+  width: 750px;
+  float: center;
+  padding: 40px 0px 0px 0px;
+}
+
+.search_form {
+  width: 265px;
+  float: right;
+  padding: 40px 0px 0px 0px;
+}
+
+.logo {
+  height: 60px;
+}
+
+a:hover {
+    background-color: inherit;
+    color: inherit;
+}
+
+@media (max-width: 750px) {
+  .search_form {
+    float: none;
+    padding: 20px 0px 0px 0px;
+  }
 }
