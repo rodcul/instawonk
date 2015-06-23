@@ -14,12 +14,10 @@
  *= require_self
  */
 
+
+
 .picture{
   width: 100px;
-}
-
-.user-details{
-  width: 300px;
 }
 
 .table th {
@@ -37,4 +35,14 @@
 .profileimg {
   width:70px;
   border-radius: 100%;
+}
+
+.navbar-brand {
+  font-size: 500px;
+}
+
+td.user-details {
+  table-layout: fixed;
+  width: 300px;
+  word-break:break-all;
 }
