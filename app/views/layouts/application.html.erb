@@ -12,17 +12,17 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
-      
+
       <%= image_tag("logo.png", class: "logo") %>
-        
+
       <div class="navbar-header">
         <a class="navbar-brand" href="/"></img>InstaWonk</a>
       </div>
 
-      <%= form_tag(users_path, :method => 'get', class: 'search_form') do %>
+      <%= form_tag(users_path, :method => 'get', class: 'search_form', enforce_utf8: false) do %>
         <%= label_tag :search, "Search" %>
         <%= text_field_tag :search, params[:search], placeholder: "Search bios" %>
-        <%= submit_tag :Search %>
+        <%= submit_tag "Search", :name => nil %>
       <% end %>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
