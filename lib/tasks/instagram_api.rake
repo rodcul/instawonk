@@ -1,5 +1,5 @@
 namespace :instagram_api do
-  desc "TODO"
+  desc "Import data from Instagram"
   task get_users: :environment do
      @first_call = HTTParty.get('https://api.instagram.com/v1/users/25025320/followed-by?access_token=2132188018.130ce4b.1febb483dd044f0982ff9b1d882e1c20')
     @data_first = @first_call.parsed_response["data"]
@@ -24,6 +24,7 @@ namespace :instagram_api do
 
         end
       end
+    ActiveRecord::Base.logger.debug "50 users added"
   end
 
   desc "TODO"
