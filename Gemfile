@@ -39,6 +39,8 @@ gem 'kaminari'
 gem 'groupdate'
 gem 'chartkick'
 gem 'newrelic_rpm'
+gem 'groupdate'
+gem 'chartkick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
