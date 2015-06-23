@@ -5,9 +5,11 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     if params[:search]
-      @users = User.search(params[:search]).order(:followed_by).reverse
+      @users = Kaminari.paginate_array(User.where.not(username: nil).search(params[:search]).order(:followed_by).reverse).page params[:page]
+      @user_count = User.search(params[:search]).count
     else
-      @users = User.all.order(:followed_by).reverse
+      @user_count = User.count
+      @users = Kaminari.paginate_array(User.where.not(username: nil).order(:followed_by).reverse).page params[:page]
     end
   end
 
