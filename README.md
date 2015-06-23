@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ashleigh090990/instawonk.svg)](https://travis-ci.org/ashleigh090990/instawonk)
+
 # INSTAWONK!
 
 Followerwonk for Instagram
