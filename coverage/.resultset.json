@@ -1,38 +1,26 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/spec/features/user_feature_spec.rb": [
+      "/Users/nickdrake/Projects/instawonk/spec/features/user_feature_spec.rb": [
         1,
         null,
         1,
         1,
-        7,
+        8,
         null,
         null,
         null,
         null,
-        7,
+        8,
         null,
         null,
         null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         null,
         null,
         1,
         1,
         1,
         1,
-        null,
-        null,
-        null,
         1,
         1,
         1,
@@ -42,7 +30,9 @@
         1,
         1,
         1,
-        1,
+        null,
+        null,
+        null,
         1,
         1,
         1,
@@ -76,10 +66,51 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
         null,
         null
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/spec/rails_helper.rb": [
+      "/Users/nickdrake/Projects/instawonk/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -133,14 +164,14 @@
         1,
         null
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/config/environment.rb": [
+      "/Users/nickdrake/Projects/instawonk/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/config/application.rb": [
+      "/Users/nickdrake/Projects/instawonk/config/application.rb": [
         1,
         null,
         1,
@@ -177,12 +208,12 @@
         null,
         null
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/config/boot.rb": [
+      "/Users/nickdrake/Projects/instawonk/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/config/environments/test.rb": [
+      "/Users/nickdrake/Projects/instawonk/config/environments/test.rb": [
         1,
         null,
         null,
@@ -226,7 +257,7 @@
         null,
         null
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/config/initializers/assets.rb": [
+      "/Users/nickdrake/Projects/instawonk/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -239,7 +270,7 @@
         null,
         null
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/config/initializers/backtrace_silencers.rb": [
+      "/Users/nickdrake/Projects/instawonk/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -248,18 +279,18 @@
         null,
         null
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/config/initializers/cookies_serializer.rb": [
+      "/Users/nickdrake/Projects/instawonk/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/config/initializers/filter_parameter_logging.rb": [
+      "/Users/nickdrake/Projects/instawonk/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/config/initializers/inflections.rb": [
+      "/Users/nickdrake/Projects/instawonk/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -277,18 +308,18 @@
         null,
         null
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/config/initializers/mime_types.rb": [
+      "/Users/nickdrake/Projects/instawonk/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/config/initializers/session_store.rb": [
+      "/Users/nickdrake/Projects/instawonk/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/config/initializers/wrap_parameters.rb": [
+      "/Users/nickdrake/Projects/instawonk/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -304,7 +335,7 @@
         null,
         null
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/config/routes.rb": [
+      "/Users/nickdrake/Projects/instawonk/config/routes.rb": [
         1,
         1,
         1,
@@ -364,44 +395,44 @@
         null,
         null
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/app/helpers/application_helper.rb": [
+      "/Users/nickdrake/Projects/instawonk/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/app/helpers/users_helper.rb": [
+      "/Users/nickdrake/Projects/instawonk/app/helpers/users_helper.rb": [
         1,
-        null,
-        null,
-        null
-      ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/spec/user_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/app/models/user.rb": [
-        1,
-        1,
-        null,
-        1,
-        4,
         null,
         null,
         null
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/app/controllers/users_controller.rb": [
+      "/Users/nickdrake/Projects/instawonk/spec/user_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/nickdrake/Projects/instawonk/app/models/user.rb": [
+        1,
+        1,
+        null,
+        1,
+        5,
+        null,
+        null,
+        null
+      ],
+      "/Users/nickdrake/Projects/instawonk/app/controllers/users_controller.rb": [
         1,
         1,
         null,
         null,
         null,
         1,
-        11,
-        4,
+        13,
+        5,
         null,
-        7,
+        8,
         null,
         null,
         null,
@@ -471,7 +502,7 @@
         null,
         null
       ],
-      "/Users/alexanderhandy/OneDrive/MA_Projects/instawonk/app/controllers/application_controller.rb": [
+      "/Users/nickdrake/Projects/instawonk/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -479,6 +510,6 @@
         null
       ]
     },
-    "timestamp": 1435072587
+    "timestamp": 1435073747
   }
 }
