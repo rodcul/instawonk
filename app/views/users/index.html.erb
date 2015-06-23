@@ -29,14 +29,14 @@
                   <span><a href='https://instagram.com/<%= user.username %>' target = "_blank">@<%= user.username %></a></span>
                   <p><%= user.bio %></p>
               </td>
-              <td class='follows'><%= user.follows %></td>
-              <td class='followers'><%= user.followed_by %></td>
+              <td class='follows'><%= number_with_delimiter(user.follows) %></td>
+              <td class='followers'><%= number_with_delimiter(user.followed_by) %></td>
             </tr>
           <% end %>
           <% end %>
         </tbody>
       </table>
-      <div class="pagination"><%= paginate @users %></div>
+      <div class="text-center"><%= paginate @users %></div>
     </div>
   </div>
 </div>
