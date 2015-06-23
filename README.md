@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/ashleigh090990/instawonk.svg)](https://travis-ci.org/ashleigh090990/instawonk)
+[![Coverage Status](https://coveralls.io/repos/ashleigh090990/instawonk/badge.svg)](https://coveralls.io/r/ashleigh090990/instawonk)
 
 # INSTAWONK!
 
