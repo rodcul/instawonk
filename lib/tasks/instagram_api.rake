@@ -1,5 +1,3 @@
-require 'byebug'
-
 namespace :instagram_api do
   desc "TODO"
   task get_users: :environment do
