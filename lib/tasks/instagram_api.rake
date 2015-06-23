@@ -1,3 +1,5 @@
+require 'byebug'
+
 namespace :instagram_api do
   desc "TODO"
   task get_users: :environment do
@@ -5,6 +7,7 @@ namespace :instagram_api do
     @data_first = @first_call.parsed_response["data"]
 
     @data_first.each do |data|
+
       User.create(instagram_id: data["id"])
       @user = User.find_by(instagram_id: data["id"])
       @second_call = HTTParty.get('https://api.instagram.com/v1/users/' + @user.instagram_id.to_s + '/?access_token=2132188018.130ce4b.1febb483dd044f0982ff9b1d882e1c20')
