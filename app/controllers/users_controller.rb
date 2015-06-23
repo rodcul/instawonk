@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       @user_count = User.search(params[:search]).count
     else
       @user_count = User.count
-      @users = User.order(:followed_by).page params[:page]
+      @users = Kaminari.paginate_array(User.order(:followed_by).reverse).page params[:page]
     end
   end
 
