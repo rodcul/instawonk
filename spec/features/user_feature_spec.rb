@@ -6,12 +6,14 @@ feature 'User' do
                 full_name: 'Alex Handy',
                 bio: 'Cooler than you megalolz',
                 follows: '0',
-                followed_by: '1000000000')
+                followed_by: '1000000000',
+                instagram_id: 1000)
     User.create(username: 'AmIsBetter',
                 full_name: 'Ashleigh',
                 bio: 'The coolest EVER',
                 follows: '0',
-                followed_by: '1000000001')
+                followed_by: '1000000001',
+                instagram_id: 1001)
   end
   scenario 'visits homepage and sees user details' do
     visit('/')
@@ -19,7 +21,7 @@ feature 'User' do
     expect(page).to have_content('Alex Handy')
     expect(page).to have_content('Cooler than you megalolz')
     expect(page).to have_content('0')
-    expect(page).to have_content('1000000000')
+    expect(page).to have_content('1,000,000,000')
   end
 
   scenario 'users are sorted by "followed by"' do
@@ -80,17 +82,20 @@ feature 'User' do
                   full_name: 'Alex Handy',
                   bio: 'Cooler than you megalolz',
                   follows: '0',
-                  followed_by: '1000000000')
+                  followed_by: '1000000000',
+                  instagram_id: 1001)
       User.create(username: 'AmIsBetter',
                   full_name: 'Ashleigh',
                   bio: 'The coolest EVER',
                   follows: '0',
-                  followed_by: '1000000001')
+                  followed_by: '1000000001',
+                  instagram_id: 1002)
       User.create(username: 'FaIsSweeter',
                   full_name: 'Fiona',
                   bio: 'The sweetest ever',
                   follows: '0',
-                  followed_by: '1000000002')
+                  followed_by: '1000000002',
+                  instagram_id: 1003)
     end
 
     scenario 'returns search results in descending followers order' do
