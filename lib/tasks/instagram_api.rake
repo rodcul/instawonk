@@ -5,7 +5,7 @@ namespace :instagram_api do
     get_user_data
   end
   def get_users
-    5.times do
+    10.times do
       @first_call = HTTParty.get('https://api.instagram.com/v1/users/25025320/followed-by?access_token=2132188018.130ce4b.1febb483dd044f0982ff9b1d882e1c20')
       @data_first = @first_call.parsed_response['data']
       @data_first.each do |data|
