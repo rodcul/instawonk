@@ -34,8 +34,13 @@ gem 'httparty'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'rails_12factor'
 gem 'kaminari'
+gem 'groupdate'
+gem 'chartkick'
+gem 'newrelic_rpm'
+gem 'groupdate'
+gem 'chartkick'
+gem 'rails_12factor', group: :production
 gem 'newrelic_rpm'
 
 group :development, :test do
