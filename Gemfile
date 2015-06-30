@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.2.2"
 
 gem 'puma'
 
@@ -40,7 +41,6 @@ gem 'kaminari'
 gem 'groupdate'
 gem 'chartkick'
 gem 'newrelic_rpm'
-gem 'groupdate'
 gem 'rails_12factor', group: :production
 
 

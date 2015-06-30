@@ -1,7 +1,7 @@
 namespace :instagram_api do
   desc 'Import data from Instagram'
   task get_users: :environment do
-    get_users
+    # get_users
     get_user_data
   end
   def get_users
