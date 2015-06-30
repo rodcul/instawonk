@@ -3,4 +3,4 @@
 
 <h1 class="text-center">Imported last 24 hours: <%= number_with_delimiter(@users_last_24h.count) %> users</h1>
 <h2 class="text-center">Total imported: <%= number_with_delimiter(@user_count) %> users</h2>
-<%= column_chart @users_last_24h.group_by_hour_of_day(:created_at).count %>
+<%= column_chart @users_last_24h.group_by_hour_of_day(:checked_instagram).count %>
