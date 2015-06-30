@@ -31,7 +31,6 @@ namespace :instagram_api do
                       follows: @data_second['counts']['follows'],
                       followed_by: @data_second['counts']['followed_by'],
                       profile_picture: @data_second['profile_picture'])
-      user.inspect
       end
     end
   end
