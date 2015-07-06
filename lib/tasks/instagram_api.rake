@@ -1,4 +1,3 @@
-require 'byebug'
 namespace :instagram_api do
   desc 'Import data from Instagram'
   task get_users: :environment do
