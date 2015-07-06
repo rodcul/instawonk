@@ -1,3 +1,4 @@
+require 'byebug'
 namespace :instagram_api do
   desc 'Import data from Instagram'
   task get_users: :environment do
@@ -19,6 +20,7 @@ namespace :instagram_api do
   def get_user_data
     @users = User.where(username: nil, checked_instagram: nil).limit 400
     @users.each do |user|
+      user.update(checked_instagram: Time.now)
       @second_call = HTTParty.get('https://api.instagram.com/v1/users/' + user.instagram_id.to_s + '?access_token=3593753.1fb234f.3d48a82cf7644fd8a6b8a6fa7d10bbd2')
       @data_second = @second_call.parsed_response['data']
       unless @data_second.nil?
@@ -29,8 +31,7 @@ namespace :instagram_api do
                       media: @data_second['counts']['media'],
                       follows: @data_second['counts']['follows'],
                       followed_by: @data_second['counts']['followed_by'],
-                      profile_picture: @data_second['profile_picture'],
-                      checked_instagram: Time.now)
+                      profile_picture: @data_second['profile_picture'])
       end
     end
   end
