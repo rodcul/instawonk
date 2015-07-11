@@ -13,11 +13,12 @@ namespace :instagram_api do
       ActiveRecord::Base.logger.debug "instagram_api:get_users:  users_added = #{counter_successes}, users_exists = #{counter_fails}"
   end
 
+
   desc 'Import data from Instagram'
   task get_user_data: :environment do
     counter_successes = 0
     counter_fails = 0
-    @users = User.where(username: nil, checked_instagram: nil).limit 500
+    @users = User.where(username: nil, checked_instagram: nil).limit 100
 
     @users.each do |user|
       @second_call = HTTParty.get('https://api.instagram.com/v1/users/' + user.instagram_id.to_s + '?access_token=3593753.1fb234f.3d48a82cf7644fd8a6b8a6fa7d10bbd2')
