@@ -19,11 +19,13 @@ namespace :instagram_api do
           user_like = likes['id']
           users.push(user_like) unless users.include?(user_like)
         end
-
         users.each do |user|
-          u = User.create(instagram_id: user.to_i)
-          u.errors.messages == { instagram_id: ['has already been taken'] } ? counter_fails += 1 : counter_successes += 1
-          puts u.id
+          if User.exists?(instagram_id: user.to_i)
+            counter_fails += 1
+          else
+            User.create(instagram_id: user.to_i)
+            counter_successes += 1
+          end
         end
       end
 
