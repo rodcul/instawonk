@@ -40,7 +40,6 @@ gem 'httparty'
 gem 'kaminari'
 gem 'groupdate'
 gem 'chartkick'
-gem 'newrelic_rpm'
 gem 'rails_12factor', group: :production
 
 
