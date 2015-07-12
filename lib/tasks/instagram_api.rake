@@ -1,18 +1,33 @@
-# require 'byebug'
 namespace :instagram_api do
   desc 'Import data from Instagram'
   task get_users: :environment do
       counter_successes = 0
       counter_fails = 0
-      5.times do
-        @first_call = HTTParty.get('https://api.instagram.com/v1/users/342315700/followed-by?access_token=2132188018.130ce4b.1febb483dd044f0982ff9b1d882e1c20')
-        @data_first = @first_call.parsed_response['data']
-        @data_first.each do |data|
-          user = User.create(instagram_id: data['id'])
-          user.errors.messages == { instagram_id: ['has already been taken'] } ? counter_fails += 1 : counter_successes += 1
+
+      @call = HTTParty.get('https://api.instagram.com/v1/media/popular?access_token=2132188018.130ce4b.1febb483dd044f0982ff9b1d882e1c20')
+      @data = @call.parsed_response['data']
+      users = []
+      @data.each do |data|
+        user_post = data['user']['id']
+        users.push(user_post) unless users.include?(user_post)
+        data['comments']['data'].each do |comments|
+          user_comment = comments['from']['id']
+          users.push(user_comment) unless users.include?(user_comment)
+        end
+
+        data['likes']['data'].each do |likes|
+          user_like = likes['id']
+          users.push(user_like) unless users.include?(user_like)
+        end
+
+        users.each do |user|
+          u = User.create(instagram_id: user.to_i)
+          u.errors.messages == { instagram_id: ['has already been taken'] } ? counter_fails += 1 : counter_successes += 1
+          puts u.id
         end
       end
-      ActiveRecord::Base.logger.debug "instagram_api:get_users:  users_added = #{counter_successes}, users_exists = #{counter_fails}"
+
+      puts "instagram_api:get_users:  users_added = #{counter_successes}, users_exists = #{counter_fails}"
   end
 
   desc 'Import data from Instagram'
@@ -40,6 +55,7 @@ namespace :instagram_api do
           counter_fails += 1
       end
     end
-    ActiveRecord::Base.logger.debug "instagram_api:get_user_data: users_public_profile = #{counter_successes}, users_private_profile = #{counter_fails}"
+    puts "instagram_api:get_user_data: users_public_profile = #{counter_successes}, users_private_profile = #{counter_fails}"
+    # ActiveRecord::Base.logger.debug "instagram_api:get_user_data: users_public_profile = #{counter_successes}, users_private_profile = #{counter_fails}"
   end
 end
