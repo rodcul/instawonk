@@ -15,21 +15,6 @@
  */
 
 
-
-body {
-  font-family: 'Comfortaa', cursive;
-  font-weight: 300;
-}
-
-table td {
-  font-family: 'Comfortaa', cursive;
-  font-weight: 300;
-}
-
-p {
-  font-family: 'Comfortaa', cursive;
-}
-
 .container {
   padding: 30px 0px 0px 0px;}
 
@@ -62,7 +47,7 @@ p {
 td.user-details {
   table-layout: fixed;
   width: 500px;
-  word-break: break-all;
+  /*word-break: break-all;*/
 }
 
 td.user-details span {

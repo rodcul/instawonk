@@ -5,7 +5,8 @@
           <tr>
             <th></th>
             <th>User Details</th>
-            <th>Following</th>
+            <th>Posts</th>
+            <th>Follows</th>
             <th>Followers</th>
           </tr>
         </thead>
@@ -26,6 +27,7 @@
                   <span><a href='https://instagram.com/<%= user.username %>' target = "_blank">@<%= user.username %></a></span>
                   <p><%= user.bio %></p>
               </td>
+              <td class='posts'><%= number_with_delimiter(user.media) %></td>
               <td class='follows'><%= number_with_delimiter(user.follows) %></td>
               <td class='followers'><%= number_with_delimiter(user.followed_by) %></td>
             </tr>
