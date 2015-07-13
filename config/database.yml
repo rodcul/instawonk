@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: instawonk_production
-  username: instawonk
-  password: <%= ENV['INSTAWONK_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
