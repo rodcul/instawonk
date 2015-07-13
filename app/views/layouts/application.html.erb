@@ -6,7 +6,6 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -16,10 +15,10 @@
       <%= image_tag("logo.png", class: "logo") %>
 
       <div class="navbar-header">
-        <a class="navbar-brand" href="/users"></img>InstaWonk</a>
+        <a class="navbar-brand" href="/"></img>InstaWonk</a>
       </div>
 
-      <%= form_tag(users_path, :method => 'get', class: 'search_form', enforce_utf8: false) do %>
+      <%= form_tag(root_path, :method => 'get', class: 'search_form', enforce_utf8: false) do %>
         <%= label_tag :search, "Search" %>
         <%= text_field_tag :search, params[:search], placeholder: "Search bios" %>
         <%= submit_tag "Search", :name => nil %>
