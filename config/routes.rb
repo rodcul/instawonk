@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   # root :to => redirect('/users')
+  # match "/users" => redirect("/")
   resources :users
   resources :stats
   # The priority is based upon order of creation: first created -> highest priority.
