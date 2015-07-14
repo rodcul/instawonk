@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/ashleigh090990/instawonk.svg)](https://travis-ci.org/ashleigh090990/instawonk)
-[![Coverage Status](https://coveralls.io/repos/ashleigh090990/instawonk/badge.svg)](https://coveralls.io/r/ashleigh090990/instawonk)
+[![Build Status](https://travis-ci.org/rodcul/instawonk.svg?branch=master)](https://travis-ci.org/rodcul/instawonk)
+[![Coverage Status](https://coveralls.io/repos/rodcul/instawonk/badge.svg?branch=master&service=github)](https://coveralls.io/github/rodcul/instawonk?branch=master)
 
 # INSTAWONK!
 
@@ -11,7 +11,7 @@ https://followerwonk.com/
 ### Project setup on local environment
 
 ```
-git clone https://github.com/ashleigh090990/instawonk.git
+git clone https://github.com/rodcul/instawonk.git
 cd instawonk
 bundle
 bin/rake db:create RAILS_ENV=development
@@ -50,4 +50,4 @@ I want a search box that lets me search insta users by topic
 
 Waffle
 ======
-https://waffle.io/ashleigh090990/instawonk
+https://waffle.io/rodcul/instawonk
