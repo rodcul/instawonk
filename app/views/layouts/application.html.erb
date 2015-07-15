@@ -18,10 +18,10 @@
 
 
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/"><img alt="Brand" src=" <%= image_path('logo-40.png') %>" width="140" height="20"></img></a>
+				<a class="navbar-brand" href="/users"><img alt="Brand" src=" <%= image_path('logo-40.png') %>" width="140" height="20"></img></a>
 			</div>
 
-			<%= form_tag(root_path, :method => 'get', class: 'navbar-form navbar-right', enforce_utf8: false) do %>
+			<%= form_tag(users_path, :method => 'get', class: 'navbar-form navbar-right', enforce_utf8: false) do %>
 				<!-- <%= label_tag :search, "Search" %> -->
 				<%= text_field_tag :search, params[:search], placeholder: "Search bios", class: 'form-control' %>
 					<%= submit_tag "Search", :name => nil, class: 'btn btn-default' %>
