@@ -1,6 +1,6 @@
   <div class='row'>
     <div>
-      <h3><%= title @page_title %> <small>Showing <%= @users.offset_value + 1 %> - <%= @users.offset_value + @users.length %> of <%= number_with_delimiter(@users.total_count) %></small></h3>
+      <h3><%= title @page_title %> <small>Showing <%= number_with_delimiter(@users.offset_value + 1) %> - <%= number_with_delimiter(@users.offset_value + @users.length) %> of <%= number_with_delimiter(@users.total_count) %></small></h3>
       <table class="table table-hover">
         <thead>
           <tr>
@@ -27,6 +27,7 @@
                   <span><%= user.full_name %></span>
                   <span><a href='https://instagram.com/<%= user.username %>' target = "_blank">@<%= user.username %></a></span>
                   <p><%= user.bio %></p>
+                  <p><%=  link_to user.website, user.website, target: "_blank", rel: "nofollow" %></p>
               </td>
               <td class='posts'><%= number_with_delimiter(user.media) %></td>
               <td class='follows'><%= number_with_delimiter(user.follows) %></td>
