@@ -14,17 +14,44 @@
  *= require_self
  */
 
+ /* Sticky footer styles
+ -------------------------------------------------- */
+ html {
+   position: relative;
+   min-height: 100%;
+ }
+ body {
+   /* Margin bottom by footer height */
+   margin-bottom: 80px;
+ }
+ .footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   /* Set the fixed height of the footer here */
+   height: 80px;
+   background-color: #f5f5f5;
+ }
 
-.container {
-  padding: 30px 0px 0px 0px;}
 
-.picture{
-  width: 100px;
-}
+ /* Custom page CSS
+ -------------------------------------------------- */
+ /* Not required for template or sticky footer method. */
 
-.table th {
-  text-align: center;
-}
+ .container {
+   width: auto;
+   max-width: 800px;
+   padding: 0 15px;
+ }
+ .container .text-muted {
+   margin: 20px 0;
+ }
+
+ .container-fluid {
+   float: center;
+ }
+
+
 
 .follows {
   text-align: center;
@@ -39,36 +66,12 @@
   border-radius: 100%;
 }
 
-.navbar-brand {
-  font-size: 50px;
-  height: 65px;
-}
-
-td.user-details {
-  table-layout: fixed;
-  width: 500px;
-  /*word-break: break-all;*/
-}
 
 td.user-details span {
   font-size: 18px;
 }
 
-.container-fluid {
-  width: 750px;
-  float: center;
-  padding: 40px 0px 0px 0px;
-}
 
-.search_form {
-  width: 265px;
-  float: right;
-  padding: 40px 0px 0px 0px;
-}
-
-.logo {
-  height: 60px;
-}
 
 a:hover {
     background-color: inherit;

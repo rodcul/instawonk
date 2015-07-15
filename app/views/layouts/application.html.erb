@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <%= display_meta_tags :site => 'Instawonk', :reverse => true %>
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<%= display_meta_tags :site => 'Instawonk', :reverse => true %>
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+			<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+			<%= csrf_meta_tags %>
 </head>
+
 <body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
 
-      <%= image_tag("logo.png", class: "logo") %>
 
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/"></img>InstaWonk</a>
-      </div>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
 
-      <%= form_tag(root_path, :method => 'get', class: 'search_form', enforce_utf8: false) do %>
-        <%= label_tag :search, "Search" %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search bios" %>
-        <%= submit_tag "Search", :name => nil %>
-      <% end %>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <!-- dummy paths -->
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-<div class='container'>
-<p id="notice"><%= notice %></p>
-<%= yield %>
-</div>
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/"><img alt="Brand" src=" <%= image_path('logo-40.png') %>" width="140" height="20"></img></a>
+			</div>
+
+			<%= form_tag(root_path, :method => 'get', class: 'navbar-form navbar-right', enforce_utf8: false) do %>
+				<!-- <%= label_tag :search, "Search" %> -->
+				<%= text_field_tag :search, params[:search], placeholder: "Search bios", class: 'form-control' %>
+					<%= submit_tag "Search", :name => nil, class: 'btn btn-default' %>
+						<% end %>
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<div class='container'>
+		<p id="notice">
+			<%= notice %>
+		</p>
+		<%= yield %>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted">DISCLAIMER: This site is in no way affiliated with Instagram except for the fact that we use their awesome API to provide you this service.</p>
+		</div>
+	</footer>
+
 </body>
+
 </html>
