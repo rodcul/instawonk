@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     if params[:search]
-      @page_title = params[:search].capitalize + ' on Instagram'
+      @page_title = '"' + params[:search].capitalize + '" on Instagram'
       # @user_count = User.where.not(username: nil).search(params[:search]).count
       @users = User.where.not(username: nil).search(params[:search]).order(followed_by: :desc).page(params[:page])
     else

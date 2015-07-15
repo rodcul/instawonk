@@ -1,7 +1,6 @@
-
   <div class='row'>
     <div>
-      <h3><%= title @page_title %></h3>
+      <h3><%= title @page_title %> <small>Showing <%= @users.offset_value + 1 %> - <%= @users.offset_value + @users.length %> of <%= number_with_delimiter(@users.total_count) %></small></h3>
       <table class="table table-hover">
         <thead>
           <tr>

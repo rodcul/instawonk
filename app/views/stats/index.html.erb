@@ -1,5 +1,7 @@
 <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 
+<div class="row">
+
 <h1 class="text-center">Total imported: <%= number_with_delimiter(@user_count) %></h1>
 
 <h2 class="text-center">Pending user data: <%= number_with_delimiter(@user_count_no_username) %></h2>
@@ -10,3 +12,4 @@
 
 <h2 class="text-center">Imported last 90 days: <%= number_with_delimiter(@users_last_90d.values.sum) %> users</h2>
 <%= column_chart @users_last_90d %>
+</div>
