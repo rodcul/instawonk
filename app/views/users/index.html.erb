@@ -27,7 +27,7 @@
                   <span><%= user.full_name %></span>
                   <span><a href='https://instagram.com/<%= user.username %>' target = "_blank">@<%= user.username %></a></span>
                   <p><%= user.bio %></p>
-                  <p><%=  link_to user.website, user.website, target: "_blank", rel: "nofollow" %></p>
+                  <!-- <p><%=  link_to user.website, user.website, target: "_blank", rel: "nofollow" %></p> -->
               </td>
               <td class='posts'><%= number_with_delimiter(user.media) %></td>
               <td class='follows'><%= number_with_delimiter(user.follows) %></td>
