@@ -38,7 +38,7 @@ feature 'User' do
 
   scenario 'can search a term and will output a user with that term in bio' do
     visit '/'
-    fill_in 'Search', with: 'coolest'
+    fill_in 'search', with: 'coolest'
     click_button 'Search'
     expect(page).to have_content 'The coolest EVER'
     expect(page).to have_content 'Ashleigh'
@@ -48,7 +48,7 @@ feature 'User' do
 
   scenario 'can take an uppercase search term and return lowercase bios that match' do
     visit '/'
-    fill_in 'Search', with: 'COOLEST'
+    fill_in 'search', with: 'COOLEST'
     click_button 'Search'
     expect(page).to have_content 'The coolest EVER'
     expect(page).to have_content 'Ashleigh'
@@ -58,7 +58,7 @@ feature 'User' do
 
   scenario 'can take a lowercase search term and return uppercase bios that match' do
     visit '/'
-    fill_in 'Search', with: 'ever'
+    fill_in 'search', with: 'ever'
     click_button 'Search'
     expect(page).to have_content 'The coolest EVER'
     expect(page).to have_content 'Ashleigh'
@@ -68,7 +68,7 @@ feature 'User' do
 
   scenario 'can take a search term in lowercase and return bio with one letter capitalised' do
     visit '/'
-    fill_in 'Search', with: 'cooler'
+    fill_in 'search', with: 'cooler'
     click_button 'Search'
     expect(page).not_to have_content 'The coolest EVER'
     expect(page).not_to have_content 'Ashleigh'
@@ -100,7 +100,7 @@ feature 'User' do
 
     scenario 'returns search results in descending followers order' do
       visit '/'
-      fill_in 'Search', with: 'ever'
+      fill_in 'search', with: 'ever'
       click_button 'Search'
       within('table.table tbody tr:nth-child(1)') do
         expect(page).to have_content 'Fiona'

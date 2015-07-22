@@ -23,7 +23,7 @@
 
 			<%= form_tag(users_path, :method => 'get', class: 'navbar-form navbar-right', enforce_utf8: false) do %>
 				<!-- <%= label_tag :search, "Search" %> -->
-				<%= text_field_tag :search, params[:search], placeholder: "Search bios", class: 'form-control' %>
+				<%= text_field_tag :search, params[:search], placeholder: "Search bios", class: 'form-control', id: 'search' %>
 					<%= submit_tag "Search", :name => nil, class: 'btn btn-default' %>
 						<% end %>
 		</div>
