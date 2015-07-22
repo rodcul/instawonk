@@ -1,4 +1,4 @@
-require "rails_helper"
+require 'rails_helper'
 
 feature 'User' do
   before do
@@ -22,6 +22,10 @@ feature 'User' do
     expect(page).to have_content('Cooler than you megalolz')
     expect(page).to have_content('0')
     expect(page).to have_content('1,000,000,000')
+  end
+  scenario 'shows total count of users' do
+    visit('/')
+    expect(page).to have_content('Showing 1 - 2 of 2')
   end
 
   scenario 'users are sorted by "followed by"' do
