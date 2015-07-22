@@ -2,18 +2,17 @@ require 'rails_helper'
 
 feature 'User' do
   before do
-    User.create(username: 'AhIsCool',
-                full_name: 'Alex Handy',
-                bio: 'Cooler than you megalolz',
-                follows: '0',
-                followed_by: '1000000000',
-                instagram_id: 1000)
-    User.create(username: 'AmIsBetter',
-                full_name: 'Ashleigh',
-                bio: 'The coolest EVER',
-                follows: '0',
-                followed_by: '1000000001',
-                instagram_id: 1001)
+    100.times { create(:user) }
+    create(:user,
+           username: 'AhIsCool',
+           full_name: 'Alex Handy',
+           bio: 'Cooler than you megalolz',
+           followed_by: '1000000000')
+    create(:user,
+           username: 'AmIsBetter',
+           full_name: 'Ashleigh',
+           bio: 'The coolest EVER',
+           followed_by: '1000000001')
   end
   scenario 'visits homepage and sees user details' do
     visit('/')
@@ -25,7 +24,7 @@ feature 'User' do
   end
   scenario 'shows total count of users' do
     visit('/')
-    expect(page).to have_content('Showing 1 - 2 of 2')
+    expect(page).to have_content('Showing 1 - 100 of 102')
   end
 
   scenario 'users are sorted by "followed by"' do
